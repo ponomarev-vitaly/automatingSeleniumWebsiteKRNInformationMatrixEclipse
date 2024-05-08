@@ -23,5 +23,7 @@ public class AutomatingSeleniumWebsiteKRNLinks {
 			System.out.println(textLink);
 		}
 		
+		driver.quit();
+		
 	}
 }
