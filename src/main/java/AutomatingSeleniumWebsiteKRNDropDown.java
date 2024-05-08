@@ -10,20 +10,20 @@ public class AutomatingSeleniumWebsiteKRNDropDown {
 
 	public static void main(String[] args) throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://krninformatix.com/selenium/testing.html");
+		driver.get("https://a2itsoft.com/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
-		WebElement multiSelect = driver.findElement(By.id("testingDropdown"));
+		WebElement multiSelect = driver.findElement(By.xpath("//body/div[@class='main-header-area header-sticky box-shadow']/div[@class='container']/div[@class='classy-nav-container breakpoint-off light left']/nav[@id='EduStudyNav']/div[@class='classy-menu']/div[@class='classynav']/ul/li[3]/a[1]"));
 		Select dd = new Select(multiSelect);
 		
 		dd.selectByIndex(2);
 		Thread.sleep(3000);
 		
-		dd.selectByValue("Manual");
+		dd.selectByValue("SERVICES");
 		Thread.sleep(3000);
 		
-		dd.selectByVisibleText("Database Testing");
+		dd.selectByVisibleText("BUSINESS TRAINING");
 		Thread.sleep(3000);
 		
 		List<WebElement> allOptions = dd.getAllSelectedOptions();
