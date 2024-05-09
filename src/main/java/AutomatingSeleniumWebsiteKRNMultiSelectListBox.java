@@ -29,6 +29,8 @@ public class AutomatingSeleniumWebsiteKRNMultiSelectListBox {
 			System.out.println(tel1);
 			
 		}
+		
+		driver.quit();
 	}
 
 }
